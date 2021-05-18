@@ -1,0 +1,9 @@
+CREATE TABLE HeaderSalonServices
+(
+TransactionId CHAR(5) NOT NULL PRIMARY KEY
+CHECK(TransactionId LIKE 'TR[0-9][0-9][0-9]'),
+CustomerId CHAR(5) NOT NULL FOREIGN KEY REFERENCES MsCustomer(CustomerId) ON UPDATE CASCADE,
+StaffId CHAR(5) NOT NULL FOREIGN KEY REFERENCES MsStaff(StaffId) ON UPDATE CASCADE,
+TransactionDate DATE,
+PaymentType VARCHAR(20),
+)

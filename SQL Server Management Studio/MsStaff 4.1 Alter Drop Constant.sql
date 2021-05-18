@@ -1,0 +1,2 @@
+ALTER TABLE MsStaff
+DROP CONSTRAINT ValidateStaffName
